@@ -5,6 +5,7 @@ import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import Login from './Components/Login.jsx';
 import Dashboard from './Components/Dashboard.jsx';
+import Privateroute from './Components/Privateroute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -13,7 +14,12 @@ const router = createBrowserRouter([
   },
   {
     path: '/dashboard',
-    element: <Dashboard></Dashboard>
+    element: 
+    <Privateroute>
+
+
+      <Dashboard></Dashboard>
+    </Privateroute>
   }
 ]);
 
